@@ -42,7 +42,7 @@ export function SignIn() {
         },
       })
     } catch (err) {
-      toast.error('Something happend :(')
+      toast.error('Invalid credentials')
     }
   }
 
