@@ -12,7 +12,7 @@ test('sign up successfully', async ({ page }) => {
 
   const toast = page.getByText('Successfully registered establishment')
 
-  expect(toast).toBeVisible()
+  await expect(toast).toBeVisible()
 })
 
 test('sign up with wrong credentials', async ({ page }) => {
@@ -27,7 +27,7 @@ test('sign up with wrong credentials', async ({ page }) => {
 
   const toast = page.getByText('Error when registering restaurant')
 
-  expect(toast).toBeVisible()
+  await expect(toast).toBeVisible()
 })
 
 test('navigate to new login page', async ({ page }) => {

@@ -9,7 +9,7 @@ test('sign in successfully', async ({ page }) => {
 
   const toast = page.getByText('Authentication link sent to your email.')
 
-  expect(toast).toBeVisible()
+  await expect(toast).toBeVisible()
 
   // await page.waitForTimeout(1000) // Hack since playwright has a bug to the end of the application
 })
@@ -23,7 +23,7 @@ test('sign in with wrong credentials', async ({ page }) => {
 
   const toast = page.getByText('Invalid credentials')
 
-  expect(toast).toBeVisible()
+  await expect(toast).toBeVisible()
 
   // await page.waitForTimeout(1000) // Hack since playwright has a bug to the end of the application
 })
